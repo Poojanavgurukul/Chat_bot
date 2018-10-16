@@ -1,18 +1,28 @@
 .inp{
+    display: flex;
     width:1000px;
     padding:10px;
-    margin-top: 500px;
+    /* margin-top: 500px; */
     border-radius:20px;
-    bottom: 0;
-    margin-right: 100px;
+    position: fixed;
+    bottom: 100px;
+    left:150px;
+    right: 100px;
+}
+body{
+    background: url("./back.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .btn{
     padding: 5px;
     width:100px;
     border-radius: 5px;
     font-size: 20px;
-    bottom: 0;
-    float:center;
+    position: fixed;
+    bottom: 100px;
+    left:50px;
+    right: 100px;
 }
 .text{
     color:red;

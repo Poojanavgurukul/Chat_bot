@@ -1,6 +1,6 @@
 import React from "react";
 import "./homepage.css";
-
+import data from './chatbot.json'
 class Home extends React.Component {
   constructor() {
     super();
@@ -20,9 +20,13 @@ class Home extends React.Component {
     c.push(this.state.search);
     this.setState({
       todo: c,
-      search: ""
+      search: "",
+      myDtata:data,
     });
+    console.log(data)
   };
+ 
+  
   render() {
     let b = this.state.todo.map((e, i) => {
       return (
@@ -34,9 +38,9 @@ class Home extends React.Component {
     return (
       <div>
         {this.state.todo.length === 0 ? <p /> : <ol>{b}</ol>}
-        <button className="btn" onClick={this.add}>
-          Send
-        </button>
+      <div className="main">
+          {this.getValue}
+        <div>
         <input
           type="text"
           placeholder="Type Here....."
@@ -44,6 +48,11 @@ class Home extends React.Component {
           onChange={this.onChange}
           className="inp"
         />
+         <button className="btn" onClick={this.add}>
+          Send
+        </button>
+        </div>
+      </div>
       </div>
     );
   }
